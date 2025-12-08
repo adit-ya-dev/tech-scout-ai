@@ -25,8 +25,7 @@ export function TRLIndicator({ level, size = 'md', showLabel = false }: TRLIndic
         <div className="flex items-center gap-2">
           <div
             className={cn(
-              'trl-indicator font-mono font-bold',
-              `trl-${level}`,
+              'flex items-center justify-center rounded-full border border-primary bg-primary text-primary-foreground font-mono font-bold',
               sizeClasses[size]
             )}
           >
@@ -64,12 +63,9 @@ export function TRLProgress({ level }: TRLProgressProps) {
           className={cn(
             'h-1.5 flex-1 rounded-full transition-all duration-300',
             trl <= level
-              ? `trl-${trl} bg-current opacity-100`
-              : 'bg-muted opacity-40'
+              ? 'bg-primary'
+              : 'bg-muted'
           )}
-          style={{
-            backgroundColor: trl <= level ? `hsl(var(--trl-${level}))` : undefined,
-          }}
         />
       ))}
     </div>

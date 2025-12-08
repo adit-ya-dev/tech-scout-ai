@@ -25,8 +25,7 @@ export function TechnologyCard({ technology, onClick, className, style }: Techno
 
   return (
     <Card
-      variant="interactive"
-      className={cn('group overflow-hidden', className)}
+      className={cn('overflow-hidden', className)}
       onClick={onClick}
       style={style}
     >
@@ -39,7 +38,7 @@ export function TechnologyCard({ technology, onClick, className, style }: Techno
                 {technology.marketAdoption} adoption
               </Badge>
             </div>
-            <h3 className="text-lg font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-1">
+            <h3 className="text-lg font-semibold text-foreground line-clamp-1">
               {technology.name}
             </h3>
           </div>

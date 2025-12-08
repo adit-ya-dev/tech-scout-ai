@@ -8,10 +8,10 @@ const cardVariants = cva(
   {
     variants: {
       variant: {
-        default: "shadow-card hover:shadow-card-lg",
-        glass: "backdrop-blur-xl border-border/50 shadow-card",
-        interactive: "shadow-card hover:shadow-glow hover:-translate-y-1 cursor-pointer",
-        stat: "relative overflow-hidden rounded-xl p-5 backdrop-blur-xl border border-border/50 shadow-card hover:shadow-glow transition-all duration-300 hover:-translate-y-0.5",
+        default: "shadow-none hover:shadow-none",
+        glass: "bg-card border-border",
+        interactive: "cursor-pointer hover:bg-muted/50",
+        stat: "rounded-xl border bg-card p-5",
         flat: "border-border/50 bg-card/50",
       },
     },
@@ -23,7 +23,7 @@ const cardVariants = cva(
 
 export interface CardProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof cardVariants> {}
+  VariantProps<typeof cardVariants> { }
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant, ...props }, ref) => (
