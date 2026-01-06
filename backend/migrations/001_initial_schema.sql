@@ -1,6 +1,10 @@
 -- Enable pgvector extension
 create extension if not exists vector;
 
+
+
+
+
 -- technologies table
 create table technologies (
   id uuid primary key default gen_random_uuid(),
